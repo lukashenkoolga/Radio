@@ -5,7 +5,7 @@ public class Radio {
     private int currentVolume;
 
     public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation >= 9) {
+        if (currentRadioStation > 9) {
             return;
         }
         if (currentRadioStation <= 0) {
@@ -22,7 +22,7 @@ public class Radio {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
         }
-        if (currentRadioStation == 10) {
+        if (currentRadioStation == 9) {
             currentRadioStation = 0;
         }
         return currentRadioStation;

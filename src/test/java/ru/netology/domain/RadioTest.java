@@ -71,8 +71,8 @@ class RadioTest {
     void clickNextStation() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(5);
-        int expected = 6;
+        radio.setCurrentRadioStation(0);
+        int expected = 1;
         int actual = radio.clickNextStation();
         assertEquals(expected, actual);
     }
@@ -81,8 +81,8 @@ class RadioTest {
     void clickNextStation1() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(0);
-        int expected = 1;
+        radio.setCurrentRadioStation(1);
+        int expected = 2;
         int actual = radio.clickNextStation();
         assertEquals(expected, actual);
     }
@@ -91,11 +91,92 @@ class RadioTest {
     void clickNextStation2() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(8);
-        int expected = 9;
+        radio.setCurrentRadioStation(3);
+        int expected = 4;
         int actual = radio.clickNextStation();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void clickNextStation3() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(4);
+        int expected = 5;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation4() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(5);
+        int expected = 6;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation5() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(6);
+        int expected = 7;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation6() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(7);
+        int expected = 8;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation7() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(9);
+        int expected = 0;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation8() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(10);
+        int expected = 1;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation9() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(-1);
+        int expected = 1;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickNextStation10() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(2);
+        int expected = 3;
+        int actual = radio.clickNextStation();
+        assertEquals(expected, actual);
+    }
+
 
     @Test
     void clickPrevStation() {
@@ -161,7 +242,6 @@ class RadioTest {
     }
 
 
-
     @Test
     void clickMinusVolume() {
         Radio radio = new Radio();
@@ -191,6 +271,7 @@ class RadioTest {
         int actual = radio.clickMinusVolume();
         assertEquals(expected, actual);
     }
+
     @Test
     void clickMinusVolume3() {
         Radio radio = new Radio();
@@ -202,7 +283,7 @@ class RadioTest {
     }
 
     @Test
-    public void clickMinusVolume4(){
+    public void clickMinusVolume4() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(15);
