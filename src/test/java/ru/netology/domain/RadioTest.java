@@ -171,8 +171,8 @@ class RadioTest {
     void clickNextStation10() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(2);
-        int expected = 3;
+        radio.setCurrentRadioStation(8);
+        int expected = 9;
         int actual = radio.clickNextStation();
         assertEquals(expected, actual);
     }

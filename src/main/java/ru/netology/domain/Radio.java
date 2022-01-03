@@ -22,9 +22,12 @@ public class Radio {
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
         }
+        else currentRadioStation = 0;
+
         if (currentRadioStation == 9) {
-            currentRadioStation = 0;
+            currentRadioStation = 9;
         }
+
         return currentRadioStation;
     }
 
