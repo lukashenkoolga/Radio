@@ -151,7 +151,7 @@ class RadioTest {
     void clickNextStation8() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(10);
+        radio.setCurrentRadioStation(12);
         int expected = 1;
         int actual = radio.clickNextStation();
         assertEquals(expected, actual);
@@ -182,8 +182,8 @@ class RadioTest {
     void clickPrevStation() {
         Radio radio = new Radio();
 
-        radio.setCurrentRadioStation(5);
-        int expected = 4;
+        radio.setCurrentRadioStation(4);
+        int expected = 3;
         int actual = radio.clickPrevStation();
         assertEquals(expected, actual);
     }
@@ -205,6 +205,16 @@ class RadioTest {
 
         radio.setCurrentRadioStation(0);
         int expected = 9;
+        int actual = radio.clickPrevStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void clickPrevStation4() {
+        Radio radio = new Radio();
+
+        radio.setCurrentRadioStation(1);
+        int expected = 0;
         int actual = radio.clickPrevStation();
         assertEquals(expected, actual);
     }

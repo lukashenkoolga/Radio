@@ -19,11 +19,13 @@ public class Radio {
     }
 
     public int clickNextStation() {
+
         if (currentRadioStation < 9) {
             currentRadioStation = currentRadioStation + 1;
         }
-        else currentRadioStation = 0;
-
+        else {
+            currentRadioStation = 0;
+        }
         if (currentRadioStation == 9) {
             currentRadioStation = 9;
         }
@@ -35,8 +37,11 @@ public class Radio {
         if (currentRadioStation > 0) {
             currentRadioStation = currentRadioStation - 1;
         }
-        if (currentRadioStation == 0) {
+        else {
             currentRadioStation = 9;
+        }
+        if (currentRadioStation == 0) {
+            currentRadioStation = 0;
         }
         return currentRadioStation;
     }
