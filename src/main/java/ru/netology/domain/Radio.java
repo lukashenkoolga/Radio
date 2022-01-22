@@ -6,19 +6,19 @@ public class Radio {
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
     private int currentRadioStation;
-    private int numberRadioStations = calculateNumberRadioStations();
+    private int numberRadioStations = 10;
     private int currentVolume;
 
 
-    public Radio(int numberOfRadioStations) {
+    public Radio(int numberRadioStations) {
         this.numberRadioStations = numberRadioStations;
     }
 
     public Radio() {
     }
 
-    public int calculateNumberRadioStations() {
-        return maxRadioStation + 1;
+    public int getNumberRadioStations() {
+        return numberRadioStations;
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {

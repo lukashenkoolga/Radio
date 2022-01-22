@@ -8,6 +8,25 @@ class RadioTest {
 
 
     @Test
+    void ShowNumberRadioStations() {
+        Radio radio= new Radio();
+        assertEquals(10, radio.getNumberRadioStations());
+    }
+
+    @Test
+    void ShowNumberRadioStations4() {
+        Radio radio= new Radio(4);
+        assertEquals(4, radio.getNumberRadioStations());
+    }
+
+    @Test
+    void ShowNumberRadioStations54() {
+        Radio radio= new Radio(54);
+        assertEquals(54, radio.getNumberRadioStations());
+    }
+
+
+    @Test
     public void setCurrentRadioStation5() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(5);
