@@ -14,6 +14,14 @@ class RadioTest {
     }
 
     @Test
+    void shouldNumberStations() {
+        Radio radio = new Radio(20);
+        radio.setNumberRadioStations(15);
+        assertEquals(15, radio.getNumberRadioStations());
+    }
+
+
+    @Test
     void ShowNumberRadioStations4() {
         Radio radio= new Radio(4);
         assertEquals(4, radio.getNumberRadioStations());

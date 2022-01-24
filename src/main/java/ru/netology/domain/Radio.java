@@ -21,6 +21,10 @@ public class Radio {
         return numberRadioStations;
     }
 
+    public void setNumberRadioStations(int numberRadioStations) {
+        this.numberRadioStations = numberRadioStations;
+    }
+
     public void setCurrentRadioStation(int currentRadioStation) {
         if (currentRadioStation > maxRadioStation) {
             this.currentRadioStation = maxRadioStation;
