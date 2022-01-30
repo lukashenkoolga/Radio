@@ -21,21 +21,32 @@ public class Radio {
         return numberRadioStations;
     }
 
-    public void setNumberRadioStations(int numberRadioStations) {
-        this.numberRadioStations = numberRadioStations;
-    }
+//    public void setNumberRadioStations(int numberRadioStations) {
+//        this.numberRadioStations=numberRadioStations;
+//    }
 
     public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation > maxRadioStation) {
-            this.currentRadioStation = maxRadioStation;
+        if (currentRadioStation >= numberRadioStations) {
             return;
         }
-        if (currentRadioStation <= minRadioStation) {
-            this.currentRadioStation = minRadioStation;
+        if (currentRadioStation < 0) {
             return;
         }
         this.currentRadioStation = currentRadioStation;
     }
+
+
+//        public void setCurrentRadioStation(int currentRadioStation) {
+//        if (currentRadioStation > maxRadioStation) {
+//            this.currentRadioStation = maxRadioStation;
+//            return;
+//        }
+//        if (currentRadioStation <= minRadioStation) {
+//            this.currentRadioStation = minRadioStation;
+//            return;
+//        }
+//        this.currentRadioStation = currentRadioStation;
+//    }
 
     public int getCurrentRadioStation() {
         return currentRadioStation;

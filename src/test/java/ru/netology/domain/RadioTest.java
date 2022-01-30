@@ -16,8 +16,8 @@ class RadioTest {
     @Test
     void shouldNumberStations() {
         Radio radio = new Radio(20);
-        radio.setNumberRadioStations(15);
-        assertEquals(15, radio.getNumberRadioStations());
+        radio.setCurrentRadioStation(15);
+        assertEquals(15, radio.getCurrentRadioStation());
     }
 
 
@@ -45,7 +45,7 @@ class RadioTest {
     public void setCurrentRadioStation11() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(11);
-        assertEquals(9, radio.getCurrentRadioStation());
+        assertEquals(0, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -106,7 +106,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(12);
         radio.clickNextStation();
-        assertEquals(0, radio.getCurrentRadioStation());
+        assertEquals(1, radio.getCurrentRadioStation());
     }
 
     @Test
