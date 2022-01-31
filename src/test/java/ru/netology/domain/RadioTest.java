@@ -29,6 +29,14 @@ class RadioTest {
     }
 
     @Test
+    void clickNextStationMax() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(9);
+        radio.clickNextStation();
+        assertEquals(0, radio.getCurrentRadioStation());
+    }
+
+    @Test
     void clickPrevStation15() {
         Radio radio = new Radio(20);
         radio.setCurrentRadioStation(15);
@@ -101,13 +109,6 @@ class RadioTest {
         assertEquals(2, radio.getCurrentRadioStation());
     }
 
-    @Test
-    void clickNextStationMax() {
-        Radio radio = new Radio();
-        radio.setCurrentRadioStation(9);
-        radio.clickNextStation();
-        assertEquals(10, radio.getCurrentRadioStation());
-    }
 
     @Test
     void clickNextStation3() {
