@@ -20,6 +20,22 @@ class RadioTest {
         assertEquals(15, radio.getCurrentRadioStation());
     }
 
+    @Test
+    void clickNextStation15() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(15);
+        radio.clickNextStation();
+        assertEquals(16, radio.getCurrentRadioStation());
+    }
+
+    @Test
+    void clickPrevStation15() {
+        Radio radio = new Radio(20);
+        radio.setCurrentRadioStation(15);
+        radio.clickPrevStation();
+        assertEquals(14, radio.getCurrentRadioStation());
+    }
+
 
     @Test
     void ShowNumberRadioStations4() {
@@ -90,7 +106,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(9);
         radio.clickNextStation();
-        assertEquals(0, radio.getCurrentRadioStation());
+        assertEquals(10, radio.getCurrentRadioStation());
     }
 
     @Test

@@ -54,7 +54,7 @@ public class Radio {
 
     public int clickNextStation() {
 
-        if (currentRadioStation < maxRadioStation) {
+        if (currentRadioStation < numberRadioStations) {
             currentRadioStation = currentRadioStation + 1;
         } else {
             currentRadioStation = minRadioStation;
@@ -64,11 +64,10 @@ public class Radio {
 
     public int clickPrevStation() {
         if (currentRadioStation > minRadioStation) {
-            currentRadioStation = currentRadioStation - 1;
+            currentRadioStation = currentRadioStation -1;
         } else {
-            currentRadioStation = maxRadioStation;
+            currentRadioStation = numberRadioStations - 1;
         }
-
         return currentRadioStation;
     }
 
